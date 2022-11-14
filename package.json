@@ -1,0 +1,23 @@
+{
+  "name": "codespace-auth-2022",
+  "version": "1.0.0",
+  "description": "codespace working environment",
+  "main": "index.js",
+  "scripts": {
+   "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thisisshivanshpatel/codespace-auth-2022.git"
+  },
+  "keywords": [
+    "codespace",
+    "auth"
+  ],
+  "author": "shivansh patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thisisshivanshpatel/codespace-auth-2022/issues"
+  },
+  "homepage": "https://github.com/thisisshivanshpatel/codespace-auth-2022#readme"
+}
