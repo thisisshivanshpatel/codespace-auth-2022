@@ -1,4 +1,5 @@
 const mongoose=require("mongoose");
+const {info,error, warn}=require("ps-logger");
 
 const {MONGODB_URL}=process.env;
 
@@ -7,10 +8,12 @@ exports.connect=()=>{
         useNewUrlParser:true,
         useUnifiedTopology:true
     })
-    .then()
+    .then(
+       info("Db Connected Successfully")
+    )
     .catch((err)=>{
-        console.log(`DB connection Failed`);
-        console.log(error.message);
+        warn(`DB connection Failed`);
+        error(error.message);
         process.exit(1);
     })
 }
