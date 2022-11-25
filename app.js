@@ -5,6 +5,7 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
+const auth = require("./middleware/auth");
 
 const app = express();
 app.use(express.json());
@@ -99,4 +100,9 @@ app.post("/login", async (req, res) => {
     console.log(error);
   }
 });
+
+app.get("/dashboard",auth,(req,res)=>{
+res.json({message:"Welcome to the dashboard",data:req.user})
+})
+
 module.exports = app;
